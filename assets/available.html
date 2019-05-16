@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Available Test Sessions</title>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="/MyNaati/Content/bootstrap-fileinput/css/css?v=MAs3EKw-3Veu932IUaxlZY4AtfZTCiQcLF5EjeHheh41"
+    rel="stylesheet" />
+
+  <link href="/MyNaati/Content/themes/base/base?v=FEEsjbkUMZTsvw2IuietYffAPdz9qxtrTFI2dnFySJo1" rel="stylesheet" />
+
+  <link href="/MyNaati/Content/DataTables/css/css?v=Ped9yvr1YUxVl1wNvJlfGaJiOGD9RbMU1O3FGMQq9Jk1" rel="stylesheet" />
+
+  <link href="/MyNaati/Bundles/Styles?v=XnVL6StQfoJJl0lrU_0_kEU-0zqT4w0XjCjdZz41wy41" rel="stylesheet" />
+
+
+
+  <script type="text/javascript">
+    window.googleMapsInitialized = false;
+
+    function __initializeGoogleMaps() {
+      window.googleMapsInitialized = true;
+    }
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAB7XeHbps7BDx6uw-plZKEHSg-lVM_KY&libraries=places&language=en&region=AU&callback=__initializeGoogleMaps">
+  </script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <a class="btn btn-primary btn-menu-collapse pull-left" data-toggle="collapse" href="#navMenu"><i
+          class="fa fa-bars fa-2x"></i></a>
+
+      <a class="navbar-brand" href="/MyNaati/" title="Home">
+        <img class="logo" alt="Naati Logo" src="/MyNaati/Content/Images/NAATIAltLogo.png">
+      </a>
+      <div class="pull-right font-size-20">
+        <span id="customerNumber">Customer Number: 232692</span>
+        <a href="/MyNaati/Account/LogOff" class="navbar-link">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <div id="navMenu" class="nav-menu panel panel-default panel-collapse collapse">
+    <div>
+      <ul class="nav nav-stacked nav-sidebar list-group">
+
+        <li>
+          <a href='/MyNaati/'>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="/MyNaati/PersonalDetails">
+            <span>Update My Details</span>
+          </a>
+        </li>
+        <li>
+          <a href="/MyNaati/Account/ChangePassword">
+            <span>Change My Password</span>
+          </a>
+        </li>
+        <li>
+          <a href="/MyNaati/Applications/MyTests">
+            <span>Manage My Tests</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <ol class="breadcrumb">
+          <li>
+            <a href="/MyNaati/">Home</a>
+          </li>
+          <li>
+            <a href="/MyNaati/Applications/MyTests">My Tests</a>
+          </li>
+          <li class="active">Available Test Sessions</li>
+        </ol>
+        <hr />
+      </div>
+      <div class="row">
+
+
+        <input id="geoLatitude1" name="geoLatitude1" type="hidden" />
+        <input id="geoLongitude1" name="geoLongitude1" type="hidden" />
+        <input id="geoLatitude2" name="geoLatitude2" type="hidden" />
+        <input id="geoLongitude2" name="geoLongitude2" type="hidden" />
+
+        <input id="mAvailableTestSessionCount" name="AvailableTestSessionCount" type="hidden" value="2" />
+
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="text-primary">Selected Test Session</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="panel panel-default allocatedTestSession-border">
+                  <div class="panel-body allocatedTestSession-background">
+                    <div class="col-lg-12">
+                      <div class="row">
+                        <div class="panel-body">
+
+                          <div class="col-md-3 col-xs-12">
+                            <label>Test Session ID</label>
+                            <p class="form-control-static">TS1172</p>
+                          </div>
+                          <div class="col-md-3 col-xs-12">
+                            <label>Test Date</label>
+                            <p class="form-control-static">Thursday, 17 October 2019</p>
+                          </div>
+                          <div class="col-md-3 col-xs-12">
+                            <label>Test Start</label>
+                            <p class="form-control-static">1:00 PM</p>
+                          </div>
+                          <div class="col-md-3 col-xs-12">
+
+                            <div class="form-group">
+                              <button class="btn btn-primary" data-test-location="NSW - Sydney" data-session-id="TS1172"
+                                data-test-date="Thursday, 17 October 2019"
+                                data-url="/MyNaati/Applications/RejectTestSession?credentialRequestId=129092&amp;credentialApplicationId=152125"
+                                type="button" data-toggle="modal" data-target="#detailModal" data-backdrop="static"
+                                data-keyboard="false" data-modal-type="Reject" data-modal-detail="TestSession">Reject
+                                this Test Session</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="panel-body">
+                          <div class="col-md-3 col-xs-12">
+                            <label>Expected Completion</label>
+                            <p class="form-control-static">4:00 PM</p>
+                          </div>
+                          <div class="col-md-3 col-xs-12">
+                            <label>Availability</label>
+                            <p class="form-control-static">
+                              <div class="availability">
+                                <div class="label label-warning">Nearly Full</div>
+                              </div>
+                            </p>
+                          </div>
+                          <div class="col-md-3 col-xs-12">
+                            <label>Venue Name</label>
+                            <p class="form-control-static">The Portside Centre, Level 5, Symantec House</p>
+                          </div>
+
+                          <div class="col-md-3 col-xs-12">
+                            <label>Venue Address</label>
+                            <p class="form-control-static">
+                              <a target="_blank"
+                                href="https://www.google.com.au/maps/place/207 Kent Street, Sydney NSW 2000"
+                                title="207 Kent Street, Sydney NSW 2000">
+                                <span>207 Kent Street, Sydney NSW 2000</span>
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 m-t">
+            <div class="b-t b-primary m-b"></div>
+            <h2 class="text-primary">Available Test Sessions in Other Locations (Interstate locations)</h2>
+          </div>
+        </div>
+        <ul class="nav nav-pills nav-outline" role="tablist">
+          <li role="presentation">
+            <a href="#location1" aria-controls="location1" role="tab" data-toggle="tab">
+              <i class="glyphicon glyphicon-map-marker"></i>
+              NSW - Sydney
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content">
+
+          <div role="tabpanel" class="tab-pane" id="location1">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="panel panel-default ">
+                      <div class="panel-body ">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="panel-body">
+
+                              <div class="col-md-3 col-xs-12">
+                                <label>Test Session ID</label>
+                                <p class="form-control-static">TS558</p>
+                              </div>
+                              <div class="col-md-3 col-xs-12">
+                                <label>Test Date</label>
+                                <p class="form-control-static">Friday, 21 June 2019</p>
+                              </div>
+                              <div class="col-md-3 col-xs-12">
+                                <label>Test Start</label>
+                                <p class="form-control-static">9:00 AM</p>
+                              </div>
+                              <div class="col-md-3 col-xs-12">
+
+                                <div class="form-group">
+                                  <button class="btn btn-primary" data-test-location="NSW - Sydney"
+                                    data-session-id="TS558" data-test-date="Friday, 21 June 2019"
+                                    data-url="/MyNaati/Applications/AllocateTestSession?testSessionId=558&amp;credentialRequestId=129092&amp;credentialApplicationId=152125"
+                                    type="button" data-toggle="modal" data-target="#detailModal" data-backdrop="static"
+                                    data-keyboard="false" data-modal-type="Accept"
+                                    data-modal-detail="TestSession">Select this Test Session</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="panel-body">
+                              <div class="col-md-3 col-xs-12">
+                                <label>Expected Completion</label>
+                                <p class="form-control-static">12:00 PM</p>
+                              </div>
+                              <div class="col-md-3 col-xs-12">
+                                <label>Availability</label>
+                                <p class="form-control-static">
+                                  <div class="availability">
+                                    <div class="label label-warning">Nearly Full</div>
+                                  </div>
+                                </p>
+                              </div>
+                              <div class="col-md-3 col-xs-12">
+                                <label>Venue Name</label>
+                                <p class="form-control-static">The Portside Centre, Level 5, Symantec House</p>
+                              </div>
+
+                              <div class="col-md-3 col-xs-12">
+                                <label>Venue Address</label>
+                                <p class="form-control-static">
+                                  <a target="_blank"
+                                    href="https://www.google.com.au/maps/place/207 Kent Street, Sydney NSW 2000"
+                                    title="207 Kent Street, Sydney NSW 2000">
+                                    <span>207 Kent Street, Sydney NSW 2000</span>
+                                  </a>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div id="detailModal" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="">OK</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <ul class="nav nav-pills">
+        <li><a href="/MyNaati/Home/About">About</a></li>
+        <li><a href="https://www.naati.com.au/get-in-touch/get-in-touch/" target="_blank">Contact Us</a></li>
+        <li><a href="https://www.naati.com.au/resources/our-policies/privacy" target="_blank">Privacy</a></li>
+        <li><a href="https://www.naati.com.au/resources/our-policies/terms-and-conditions" target="_blank">Terms and
+            Conditions</a></li>
+        <li><a href="https://www.naati.com.au/resources/faq/" target="_blank">NAATI Website</a></li>
+      </ul>
+      <span class="glyphicon glyphicon-copyright-mark"></span> National Accreditation Authority for Translators and
+      Interpreters Ltd ABN 42 008 596 996
+    </div>
+  </div>
+
+  <script src="/MyNaati/Bundles/Scripts?v=HC9aj5JBDvDgePPCn-dzHss81XVlIySOkX44PV64WQo1"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      var $navMenu = $('#navMenu');
+      $navMenu.click(function (e) {
+        if ($navMenu[0] === $(e.target)[0]) {
+          $navMenu.collapse('hide');
+        }
+      });
+
+
+      $('.modal.modal-layer2').on('shown.bs.modal', function () {
+        var index = $('.modal.in').index(this);
+        if (index >= 0) {
+          $('.modal-backdrop').eq(index).addClass('modal-layer2');
+        }
+      });
+
+      $(window).resize(function () {
+        $('.chosen-container').each(function () {
+          var $this = $(this);
+          $this.width($this.parent().width());
+        });
+      });
+
+      toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "2000",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
+
+    });
+  </script>
+  <script id="loadingOverlayTemplate" type="text/html">
+    <div class="loading-overlay">
+      <div>
+        <div class="sk-circle">
+          <div class="sk-circle1 sk-child">
+          </div>
+          <div class="sk-circle2 sk-child">
+          </div>
+          <div class="sk-circle3 sk-child">
+          </div>
+          <div class="sk-circle4 sk-child">
+          </div>
+          <div class="sk-circle5 sk-child">
+          </div>
+          <div class="sk-circle6 sk-child">
+          </div>
+          <div class="sk-circle7 sk-child">
+          </div>
+          <div class="sk-circle8 sk-child">
+          </div>
+          <div class="sk-circle9 sk-child">
+          </div>
+          <div class="sk-circle10 sk-child">
+          </div>
+          <div class="sk-circle11 sk-child">
+          </div>
+          <div class="sk-circle12 sk-child">
+          </div>
+        </div>
+        <span>Loading...</span>
+      </div>
+    </div>
+  </script>
+
+
+  <script id="confirmAccept" type="text/html">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="manageTestError" class="validation-summary-errors" style="display: block;">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="alert" role="alert">
+          Are you sure you want to select this test date?<br /><br /> Please note that this will remove you from TS1172
+          Thursday, 17 October 2019 to [[testSession]] [[testDate]]. [[additionalInfo]]
+        </p>
+
+      </div>
+    </div>
+  </script>
+  <script id="confirmReject" type="text/html">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="manageTestError" class="validation-summary-errors" style="display: block;">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="alert" role="alert">
+          Are you sure you want to reject this test date?<br /><br />Once you reject the test date you will be placed on
+          a wait list and will be invited for the next available test date.
+        </p>
+
+      </div>
+    </div>
+  </script>
+
+  <script>
+    $(function () {
+      var $modal = $('#detailModal');
+      var $okButton = $modal.find('.modal-footer .btn-primary');
+      var $cancelButton = $modal.find('.modal-footer .btn-danger');
+      var $target = null;
+
+      function setupModal(event) {
+        $target = $(event.relatedTarget);
+        var modalType = $target.data('modal-type');
+
+        var id = 'confirm' + modalType;
+
+        $modal.find('.modal-title').text(modalType);
+        var testLocation = $target.data('test-location');
+        var testDate = $target.data('test-date');
+        var sessionId = $target.data('session-id');
+        var htmlBody = $('#' + id).html().replace('[[testSession]]', sessionId)
+          .replace('[[testDate]]', testDate)
+          .replace('[[additionalInfo]]', testLocation ?
+            'Please note that this test session is not in your preferred location.' : '');
+
+        $modal.find('.modal-body').html(htmlBody);
+
+        $okButton.prop('disabled', false);
+        $okButton.text(modalType);
+        $okButton.data('url', $target.data('url'));
+        $target.prop('disabled', true);
+        $okButton.show();
+
+        $cancelButton.prop('disabled', false);
+        $cancelButton.show();
+        $modal.data('modalType', modalType);
+        $modal.modal('show');
+
+      }
+
+      $modal.on('hidden.bs.modal', function () {
+        $target.prop('disabled', false);
+      });
+
+      $modal.on('show.bs.modal',
+        function (event) {
+          $('.validation-summary-errors').empty();
+          if (event.relatedTarget) {
+            setupModal(event);
+          }
+        });
+
+      $okButton.on('click',
+        function (evt) {
+
+          evt.preventDefault();
+
+          var $this = $(this);
+          var actionButtons = $('#detailModal .modal-footer button');
+          actionButtons.attr('disabled', true);
+          var actionButtonsText = actionButtons.filter('.btn-primary').text();
+          actionButtons.filter('.btn-primary').text('Processing...');
+
+          function reactivateButtons() {
+            actionButtons.attr('disabled', false);
+            actionButtons.filter('.btn-primary').text(actionButtonsText);
+          }
+
+          function setExitMessage(message) {
+
+            $cancelButton.attr('disabled', false);
+            $okButton.hide();
+            $cancelButton.text('Close');
+            $modal.find('.modal-body').html(message);
+
+            if (message.includes("We're sorry, that session has reached capacity and is no longer available")) {
+              $modal.on('hidden.bs.modal', function () {
+                window.location.reload();
+              });
+            } else {
+              $modal.on('hidden.bs.modal', function () {
+                window.location.href = "/MyNaati/Applications/MyTests";
+              });
+            }
+
+          }
+
+
+          $.ajax({
+            url: $this.data('url'),
+            type: 'GET',
+            success: function (result) {
+              if (result === '') {
+
+                var message =
+                  '<p>You are now assigned to sit your test on the selected date. You will receive a confirmation email with further instructions.</p>';
+                if (actionButtonsText === "Reject") {
+
+                  message =
+                    '<p>You have rejected the test date. You will receive a confirmation email with further instructions.</p>';
+                }
+                setExitMessage(message);
+
+              } else {
+                setExitMessage(result.data);
+              }
+            },
+            error: function () {
+              reactivateButtons();
+              var $errors = $('.validation-summary-errors');
+              $errors.empty();
+              $errors.append('<li>A communications error was encountered. Please try again.</li>');
+            }
+          });
+        });
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+
+      var map;
+      var markers = [];
+
+      //setTimeout(function () {
+      //    for (var i = 0; i < parseInt($('#mAvailableTestSessionCount').val()) ; i++) {
+
+      //        var mapCanvasId = 'mapCanvasAddress-' + i.toString();
+
+      //        latitude = $('#geoLatitude' + i.toString()).val();
+      //        longitude = $('#geoLongitude' + i.toString()).val();
+
+      //        initializeGoogleMaps(mapCanvasId, {
+      //            position: new google.maps.LatLng(latitude, longitude),
+      //            title: 'NAATI National Office'
+      //        });
+      //    }
+
+      //}, 500);
+
+
+
+      setTimeout(function () {
+        var mapCanvasId = 'mapCanvasAddress-' + 'TS1172';
+
+        var latitude = "0".replace(',', '.');
+        var longitude = "0".replace(',', '.');
+
+        initializeGoogleMaps(mapCanvasId, {
+          position: new google.maps.LatLng(latitude, longitude),
+          title: 'NAATI National Office'
+        });
+
+      }, 200);
+
+
+
+
+
+
+      setTimeout(function () {
+        var mapCanvasId = 'mapCanvasAddress-' + 'TS558';
+
+        var latitude = "0".replace(',', '.');
+        var longitude = "0".replace(',', '.');
+
+        initializeGoogleMaps(mapCanvasId, {
+          position: new google.maps.LatLng(latitude, longitude),
+          title: 'NAATI National Office'
+        });
+
+      }, 200);
+
+
+
+
+
+      function initializeGoogleMaps(mapCanvasElementName, location) {
+        location = location || {
+          position: new google.maps.LatLng(-35.321984, 149.093084),
+          title: 'NAATI National Office'
+        };
+
+        map = new google.maps.Map($('#' + mapCanvasElementName)[0], {
+          center: location.position,
+          zoom: 12,
+          scaleControl: true,
+          zoomControl: true,
+          panControl: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        markers.push(new google.maps.Marker($.extend(location, {
+          map: map,
+          zIndex: 255
+        })));
+
+        google.maps.visualRefresh = true;
+      }
+
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25701862-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+      '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+
+</html>
